@@ -148,12 +148,11 @@ El análisis de correlación muestra que incluir SPY como activo de referencia r
 
 ## 👤 Autor
 
-**[Tu nombre]**
+Juan Bautista Jeanneret
 Estudiante de Análisis de Datos | Interesado en finanzas cuantitativas y mercados de capitales
 
-- 🔗 [LinkedIn](https://linkedin.com/in/tu-perfil)
-- 💻 [GitHub](https://github.com/tu-usuario)
-- 📧 tu-email@ejemplo.com
+- 🔗 https://www.linkedin.com/in/juan-bautista-jeanneret-934aa3263/
+- 📧 Bautij4@gmail.com
 
 ---
 
