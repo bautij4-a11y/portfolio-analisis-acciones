@@ -132,11 +132,36 @@ Este proyecto cubre los conceptos fundamentales que se aplican en roles de anali
 
 ## 📊 Resultados destacados
 
-### Frontera eficiente
+### Métricas de riesgo por activo
 
-La simulación genera 10.000 portafolios aleatorios y encuentra la combinación de activos que maximiza el ratio Sharpe. El portafolio óptimo y el de mínima varianza quedan marcados explícitamente en el gráfico.
+| Activo | Retorno anual | Volatilidad anual | Ratio Sharpe | VaR 95% diario | Max Drawdown |
+|---|---|---|---|---|---|
+| GGAL | 64.88% | 63.52% | 0.94 | -5.24% | -62.95% |
+| MELI | 18.15% | 39.15% | 0.34 | -3.58% | -40.82% |
+| SPY | 20.35% | 15.26% | **1.01** | -1.42% | -18.76% |
+| YPF | 55.87% | 54.49% | 0.93 | -4.44% | -48.79% |
 
-*(Ver notebook `04_optimizacion_portafolio.ipynb` para el gráfico interactivo)*
+A pesar de tener el menor retorno bruto del grupo, **SPY obtuvo el mejor ratio Sharpe (1.01)** gracias a su baja volatilidad, mostrando que el retorno ajustado por riesgo no siempre coincide con el de mayor rendimiento nominal. GGAL, en cambio, combinó el retorno más alto (64.88%) con el mayor riesgo: una volatilidad de 63.52% y un drawdown máximo de -62.95%.
+
+*(Ver notebook `03_metricas_riesgo.ipynb` para el cálculo completo)*
+
+### Frontera eficiente y portafolio óptimo
+
+La simulación Monte Carlo (10.000 portafolios aleatorios) identificó dos estrategias óptimas:
+
+| | Máximo Sharpe | Mínima Varianza |
+|---|---|---|
+| GGAL | 3.92% | 0.87% |
+| MELI | 1.65% | 0.07% |
+| SPY | 74.32% | 93.28% |
+| YPF | 20.12% | 5.79% |
+| **Retorno esperado** | 29.21% | 22.79% |
+| **Volatilidad** | 19.88% | 15.71% |
+| **Ratio Sharpe** | **1.22** | 1.13 |
+
+Ambas estrategias concentran la mayor parte del capital en SPY, consistente con su mejor relación riesgo/retorno individual. El portafolio de máximo Sharpe asume algo más de volatilidad a cambio de un retorno esperado mayor, mientras que el de mínima varianza prioriza estabilidad casi por completo.
+
+*(Ver notebook `04_optimizacion_portafolio.ipynb` para el gráfico de la frontera eficiente)*
 
 ### Matriz de correlaciones
 
@@ -148,10 +173,11 @@ El análisis de correlación muestra que incluir SPY como activo de referencia r
 
 ## 👤 Autor
 
-Juan Bautista Jeanneret
+Juan Baustista Jeanneret
 Estudiante de Análisis de Datos | Interesado en finanzas cuantitativas y mercados de capitales
 
-- 🔗 https://www.linkedin.com/in/juan-bautista-jeanneret-934aa3263/
+- 🔗 [LinkedIn]https://www.linkedin.com/in/juan-bautista-jeanneret-934aa3263/
+- 💻 [GitHub]https://github.com/bautij4-a11y
 - 📧 Bautij4@gmail.com
 
 ---
